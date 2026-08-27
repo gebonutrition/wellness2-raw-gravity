@@ -169,9 +169,16 @@
   let loaded = false;
   let loadP = null;
 
-  function load() {
-    if (loadP) return loadP;
-    loadP = fetch(STATE_FILE)
+	function load() {
+	  if (loadP) return loadP;
+
+	  if (!(window.omelette && window.omelette.writeFile)) {
+		loadP = Promise.resolve(null);
+		loaded = true;
+		return loadP;
+	  }
+
+	  loadP = fetch(STATE_FILE)
       .then((r) => (r.ok ? r.json() : null))
       .then((j) => {
         // Merge: sidecar loses to any in-memory change that raced ahead of
