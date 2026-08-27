@@ -187,7 +187,6 @@
               shape="rounded"
               radius="16"
               fit="cover"
-              src="{{ u.src }}"
               placeholder="{{ u.placeholder }}"
               style="width:100%;height:280px;display:block">
             </image-slot>
@@ -221,7 +220,7 @@
       <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
         <div style="background:#fff;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;box-shadow:0 4px 18px rgba(22,33,61,.06)">
           <div style="display:flex;align-items:center;gap:14px">
-            <image-slot id="{{ r.id }}" shape="circle" fit="cover" src="./assets/{{ r.photo }}" placeholder="Photo" style="width:56px;height:56px;flex:none"></image-slot>
+            <image-slot id="{{ r.id }}" shape="circle" fit="cover" placeholder="Photo" style="width:56px;height:56px;flex:none"></image-slot>
             <div>
               <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;color:#22345C">{{ r.name }}</div>
               <div style="color:#F5C518;letter-spacing:1px;font-size:14px">{{ r.starsStr }}</div>
@@ -519,7 +518,6 @@
               id="{{ r.id }}-m"
               shape="circle"
               fit="cover"
-              src="./assets/{{ r.photo }}"
               placeholder="Photo"
               style="width:44px;height:44px;flex:none">
             </image-slot>
@@ -962,7 +960,49 @@ class Component extends DCLogic {
         if (isDown) stopDrag();
       });
     };
+    function initLocalImages() {
+      const ugcSources = [
+        './assets/ugc-1.png',
+        './assets/ugc-2.png',
+        './assets/ugc-3.png',
+        './assets/ugc-4.jpeg',
+        './assets/ugc-5.png',
+        './assets/ugc-6.png'
+      ];
 
+      const reviewSources = [
+        './assets/emma.png',
+        './assets/jess.png',
+        './assets/priya.png',
+        './assets/linda.png',
+        './assets/rachel.png',
+        './assets/alexis.jpeg'
+      ];
+
+      document
+        .querySelectorAll('section[data-screen-label="UGC Photos"]')
+        .forEach((section) => {
+          section.querySelectorAll('image-slot').forEach((slot, index) => {
+            if (ugcSources[index]) {
+              slot.setAttribute('src', ugcSources[index]);
+            }
+          });
+        });
+
+      document
+        .querySelectorAll('section[data-screen-label="03 REVIEWS"]')
+        .forEach((section) => {
+          section.querySelectorAll('image-slot').forEach((slot, index) => {
+            if (reviewSources[index]) {
+              slot.setAttribute('src', reviewSources[index]);
+            }
+          });
+        });
+    }
+
+    setTimeout(initLocalImages, 500);
+    setTimeout(initLocalImages, 1500);
+    setTimeout(initLocalImages, 3000);
     setTimeout(initUGCSlider, 500);
     setTimeout(initUGCSlider, 1500);
     setTimeout(initUGCSlider, 3000);
