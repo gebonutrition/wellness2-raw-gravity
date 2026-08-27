@@ -38,9 +38,6 @@ export default async function handler(req, res) {
                     type: 'profile',
                     attributes: {
                       email,
-                      properties: {
-                        source: source || 'direct'
-                      },
                       subscriptions: {
                         email: {
                           marketing: {
