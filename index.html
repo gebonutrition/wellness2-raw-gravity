@@ -681,7 +681,10 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._timer = setInterval(() => this.setState({ now: Date.now() }), 1000);
+
     this._ugcPhotos = this._buildUgcPhotos();
+
+    setTimeout(() => this._setLocalImages(), 100);
   }
   componentWillUnmount() {
     clearInterval(this._timer);
@@ -730,7 +733,53 @@ class Component extends DCLogic {
         {id:'ugc-6', src:'./assets/ugc-6.png', placeholder:'UGC photo 6'},
       ];
     }
+  _setLocalImages() {
+  const ugcSources = [
+    './assets/ugc-1.png',
+    './assets/ugc-2.png',
+    './assets/ugc-3.png',
+    './assets/ugc-4.jpeg',
+    './assets/ugc-5.png',
+    './assets/ugc-6.png'
+  ];
 
+  const reviewSources = [
+    './assets/emma.png',
+    './assets/jess.png',
+    './assets/priya.png',
+    './assets/linda.png',
+    './assets/rachel.png',
+    './assets/alexis.jpeg'
+  ];
+
+  const ugcSections = document.querySelectorAll(
+    'section[data-screen-label="UGC Photos"]'
+  );
+
+  ugcSections.forEach((section) => {
+    const slots = section.querySelectorAll('image-slot');
+
+    slots.forEach((slot, index) => {
+      if (ugcSources[index]) {
+        slot.setAttribute('src', ugcSources[index]);
+      }
+    });
+  });
+
+  const reviewSections = document.querySelectorAll(
+    'section[data-screen-label="03 REVIEWS"]'
+  );
+
+  reviewSections.forEach((section) => {
+    const slots = section.querySelectorAll('image-slot');
+
+    slots.forEach((slot, index) => {
+      if (reviewSources[index]) {
+        slot.setAttribute('src', reviewSources[index]);
+      }
+    });
+  });
+}
   renderVals() {
     const avatars = [
       {initial:'E', color:'#1479C9'},
