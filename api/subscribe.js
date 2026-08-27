@@ -10,12 +10,20 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Email is required' });
     }
 
+    const apiKey = process.env.KLAVIYO_API_KEY;
+    const listId = process.env.KLAVIYO_LIST_ID;
+
+    if (!apiKey || !listId) {
+      console.error('Missing Klaviyo environment variables');
+      return res.status(500).json({ error: 'Server configuration error' });
+    }
+
     const response = await fetch(
-      'https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/',
+      'https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs',
       {
         method: 'POST',
         headers: {
-          'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_API_KEY}`,
+          'Authorization': `Klaviyo-API-Key ${apiKey}`,
           'Content-Type': 'application/vnd.api+json',
           'Accept': 'application/vnd.api+json',
           'revision': '2026-07-15'
@@ -30,6 +38,9 @@ export default async function handler(req, res) {
                     type: 'profile',
                     attributes: {
                       email,
+                      properties: {
+                        source: source || 'direct'
+                      },
                       subscriptions: {
                         email: {
                           marketing: {
@@ -46,7 +57,7 @@ export default async function handler(req, res) {
               list: {
                 data: {
                   type: 'list',
-                  id: 'RiQaUD'
+                  id: listId
                 }
               }
             }
@@ -58,47 +69,19 @@ export default async function handler(req, res) {
     const responseText = await response.text();
 
     if (!response.ok) {
-      console.error('Klaviyo error:', responseText);
-			const profileResponse = await fetch(
-	  'https://a.klaviyo.com/api/profile-import/',
-	  {
-		method: 'POST',
-		headers: {
-		  'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_API_KEY}`,
-		  'Content-Type': 'application/vnd.api+json',
-		  'Accept': 'application/vnd.api+json',
-		  'revision': '2026-07-15'
-		},
-		body: JSON.stringify({
-		  data: {
-			type: 'profile',
-			attributes: {
-			  email,
-			  properties: {
-				source: source || 'direct'
-			  }
-			}
-		  }
-		})
-	  }
-	);
+      console.error('Klaviyo error:', response.status, responseText);
 
-	if (!profileResponse.ok) {
-	  const profileError = await profileResponse.text();
-	  console.error('Klaviyo profile update error:', profileError);
-
-	  return res.status(500).json({
-		error: 'Profile update failed'
-	  });
-	}
-      return res.status(response.status).json({
+      return res.status(500).json({
         error: 'Klaviyo request failed'
       });
     }
 
     return res.status(200).json({
-      success: true
+      success: true,
+      promoCode: 'RAWGRAV25',
+      amazonUrl: process.env.AMAZON_URL || 'https://www.amazon.com/'
     });
+
   } catch (error) {
     console.error('Subscribe error:', error);
 

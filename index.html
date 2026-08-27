@@ -795,7 +795,47 @@ class Component extends DCLogic {
       email: this.state.email,
       submitted: this.state.submitted,
       handleEmailChange: (e) => this.setState({ email: e.target.value }),
-      handleSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+      handleSubmit: async (e) => {
+      e.preventDefault();
+
+      const email = String(this.state.email || '').trim();
+
+      if (!email) return;
+
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const source = params.get('source') || 'direct';
+
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email,
+            source
+          })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || 'Subscription failed');
+        }
+
+        this.setState({
+          submitted: true
+        });
+
+        setTimeout(() => {
+          window.location.href = data.amazonUrl || 'https://www.amazon.com/';
+        }, 1200);
+
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('Something went wrong. Please try again.');
+      }
+    },
       checkIconWhite: this.checkSvg('#F5C518'),
       checkIconNavy: this.checkSvg('#1479C9'),
       checkIconYellow: this.checkSvg('#F5C518'),
