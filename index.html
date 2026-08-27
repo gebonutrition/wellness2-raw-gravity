@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail" data-bg-color="#22345C"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#22345C"></rect><text x="50" y="58" font-family="sans-serif" font-weight="900" font-size="28" fill="#F5C518" text-anchor="middle">RG</text></svg></template>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  .desktop-version { display: block; }
+  .mobile-version { display: none; }
+
+  @media (max-width: 767px) {
+    .desktop-version { display: none; }
+    .mobile-version { display: block; }
+  }
+  body{margin:0;background:#FFFFFF;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#1479C9;text-decoration:none}
+  a:hover{color:#0f5fa3}
+  h1,h2,h3{font-family:'Poppins',sans-serif;margin:0}
+  .chk{display:flex;align-items:flex-start;gap:10px}
+  .pill{display:inline-flex;align-items:center;background:#F5C518;color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:13px;letter-spacing:.03em;padding:8px 18px;border-radius:999px;white-space:nowrap}
+</style>
+</helmet>
+
+<div class="desktop-version" style="width:100%;background:#fff;overflow:hidden">
+
+  <!-- Top bar -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 64px;background:#22345C">
+    <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:20px;letter-spacing:.04em;color:#fff">RAW GRAVITY</div>
+    <div style="display:flex;align-items:center;gap:20px">
+      <div style="display:flex;align-items:center;gap:8px;color:#F5C518;font-family:'Poppins',sans-serif;font-weight:700;font-size:14px">
+        {{ stars }}
+        <span style="color:#fff;font-weight:500">4.9 · 2,847 reviews</span>
+      </div>
+      <a href="#email-form-desktop" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:13px;padding:9px 16px;border-radius:8px;white-space:nowrap">{{ cartIcon }} Buy Now on Amazon</a>
+    </div>
+  </div>
+
+  <!-- BLOCK 1: HERO -->
+  <section data-screen-label="01 HERO" style="position: relative; min-height: 680px; display: flex; align-items: stretch; background: #22345C; overflow: hidden; width: 100%">
+    <div style="position: absolute; top: 0; bottom: 0; right: 0; width: 54%; background-image: url('./assets/hero.png'); background-size: cover; background-position: top center"></div>
+    <div style="position: absolute; top: 0; bottom: 0; right: 0; width: 100%; background: linear-gradient(90deg, rgba(20,121,201,0.85) 0%, rgba(22,33,61,0) 18%); pointer-events: auto"><div style="position: relative; z-index: 1; width: 46%; padding: 32px 40px 56px 64px; display: flex; flex-direction: column; gap: 16px">
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 14px">
+          <span style="color:#F5C518;font-weight:700;font-size:14px;font-family:'Poppins',sans-serif">✓ Gut-friendly certified</span>
+        </div>
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 14px">
+          {{ flagIcon }}
+          <span style="color:#F5C518;font-weight:700;font-size:14px;font-family:'Poppins',sans-serif">MADE IN USA</span>
+        </div>
+      </div>
+
+<h1 style="font-size:46px;line-height:1.03;font-weight:900;letter-spacing:-.01em">
+        <span style="color:#F5C518">CALM ENERGY</span><br>
+        <span style="color:#fff">EVERY SINGLE CUP</span>
+      </h1>
+
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 0px; width: 347px; height: 117px">
+        <div class="chk">{{ checkIconWhite }}<span style="color: #fff; font-size: 17px; line-height: 1.4; width: 333px; height: 48px">Designed for real energy <br>without the jitters or the crash</span></div>
+        <div class="chk">{{ checkIconWhite }}<span style="color:#fff;font-size:17px;line-height:1.4">A coffee ritual you'll actually <br>look forward to</span></div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:14px;margin-top:6px">
+        <div style="display:flex;gap:2px">{{ starsLarge }}</div>
+        <span style="color:#fff;font-weight:600;font-size:15px">4.9 · 2,847 reviews</span>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:16px;margin-top:2px">
+        <span style="color:rgba(255,255,255,.55);text-decoration:line-through;font-size:22px;font-weight:600">43,20$</span>
+        <span style="color:#F5C518;font-size:42px;font-weight:900;font-family:'Poppins',sans-serif">32,40 $</span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <span style="color:rgba(255,255,255,.6);font-size:12px;font-weight:700;letter-spacing:.08em;font-family:'Poppins',sans-serif">SALE ENDS IN:</span>
+        <div style="display:flex;gap:8px">
+          <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="3">
+            <div style="background:rgba(255,255,255,.1);border-radius:8px;padding:8px 12px;text-align:center;min-width:52px">
+              <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:22px;color:#fff">{{ c.value }}</div>
+              <div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.05em">{{ c.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <a href="#email-form-desktop" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:18px;padding:18px 30px;border-radius:10px;width:fit-content;box-shadow:0 8px 20px rgba(255,153,0,.35)">
+        {{ cartIcon }} Buy Now on Amazon <span style="background:#22345C;color:#F5C518;font-size:13px;padding:3px 9px;border-radius:6px;margin-left:2px">-25%</span>
+      </a>
+    </div></div>
+
+    
+  </section>
+
+  <!-- BLOCK 2: RESULTS -->
+  <section data-screen-label="02 RESULTS" style="background:#FDF8F0;padding:88px 64px;display:flex;flex-direction:column;gap:44px;align-items:center">
+
+    <h2 style="text-align:center;font-size:40px;font-weight:900;color:#22345C;line-height:1.2">Feel the Difference<br></h2>
+
+    <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:32px;align-items:center;max-width:1200px;width:100%">
+      <div style="position:relative;min-width:0">
+        <div class="pill" style="position:absolute;top:16px;left:16px;background:#22345C;color:#fff;z-index:1">BEFORE</div>
+        <image-slot id="before-photo" shape="rounded" radius="22" fit="cover" src="./assets/before.webp" placeholder="Woman looking tired and jittery, holding regular coffee" style="width:100%;height:380px;min-width:0"></image-slot>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
+          <sc-for list="{{ beforePoints }}" as="b" hint-placeholder-count="4">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span style="color:#B0453C;font-size:18px">✕</span>
+              <span style="color:#22345C;font-size:16px">{{ b }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="position:relative;width:220px;height:460px;margin:-40px -30px;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center">
+        
+        <image-slot id="formula-photo" shape="rect" fit="contain" src="./assets/debug_jar.png" placeholder="Product jar of Raw Coffee+, transparent background, standalone bottle shot" style="width:200px;height:300px;min-width:0;filter:drop-shadow(0 20px 24px rgba(34,52,92,.25))"></image-slot>
+      </div>
+
+      <div style="position:relative;min-width:0">
+        <div class="pill" style="position:absolute;top:16px;right:16px;background:#F5C518;color:#22345C;z-index:1">AFTER</div>
+        <image-slot id="after-photo" shape="rounded" radius="22" fit="cover" src="./assets/after.webp" placeholder="Woman smiling, calm and confident, holding Raw Gravity" style="width:100%;height:380px;min-width:0"></image-slot>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
+          <sc-for list="{{ afterPoints }}" as="a" hint-placeholder-count="4">
+            <div class="chk">{{ checkIconYellowSmall }}<span style="color:#22345C;font-size:16px;font-weight:600">{{ a }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- MINI PROMO STRIP -->
+  <div style="background:#22345C;padding:18px 64px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:18px;letter-spacing:.04em;color:#fff">RAW GRAVITY</div>
+    <div style="display:flex;align-items:center;gap:14px">
+      <span style="color:rgba(255,255,255,.55);text-decoration:line-through;font-size:16px;font-weight:600">43,20$</span>
+      <span style="color:#F5C518;font-size:24px;font-weight:900;font-family:'Poppins',sans-serif">32,40 $</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span style="color:rgba(255,255,255,.55);font-size:11px;font-weight:700;letter-spacing:.06em;font-family:'Poppins',sans-serif">ENDS IN:</span>
+      <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="4">
+        <div style="background:rgba(255,255,255,.1);border-radius:6px;padding:4px 8px;text-align:center;min-width:34px">
+          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:14px;color:#fff">{{ c.value }}</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.04em">{{ c.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <a href="#email-form-desktop" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:14px;padding:10px 18px;border-radius:8px;white-space:nowrap">{{ cartIcon }} Buy Now on Amazon -25%</a>
+  </div>
+
+  <!-- UGC PHOTO GRID -->
+  <section
+    data-screen-label="UGC Photos"
+    class="ugc-desktop-slider"
+    id="ugc-arrow-left"
+    style="background:#fff;padding:56px 64px;overflow:hidden">
+
+    <div style="position:relative;width:100%;max-width:1400px;margin:0 auto">
+
+      <!-- LEFT ARROW -->
+      <button
+        type="button"
+        class="ugc-arrow ugc-arrow-left"
+        aria-label="Previous photos"
+        style="position:absolute;left:-18px;top:50%;transform:translateY(-50%);z-index:10;width:42px;height:42px;border:none;border-radius:50%;background:#22345C;color:#F5C518;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.18)">
+        ‹
+      </button>
+
+      <!-- SLIDER -->
+      <div
+        id="ugc-slider"
+        style="display:flex;gap:20px;width:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;padding:0 4px">
+
+        <sc-for list="{{ ugcPhotos }}" as="u" hint-placeholder-count="6">
+
+          <div
+            style="flex:0 0 calc((100% - 80px) / 5);min-width:220px;scroll-snap-align:start">
+
+            <image-slot
+              id="{{ u.id }}"
+              shape="rounded"
+              radius="16"
+              fit="cover"
+              src="{{ u.src }}"
+              placeholder="{{ u.placeholder }}"
+              style="width:100%;height:280px;display:block">
+            </image-slot>
+
+          </div>
+
+        </sc-for>
+
+      </div>
+
+      <!-- RIGHT ARROW -->
+      <button
+        type="button"
+        class="ugc-arrow ugc-arrow-right"
+        id="ugc-arrow-right"
+        aria-label="Next photos"
+        style="position:absolute;right:-18px;top:50%;transform:translateY(-50%);z-index:10;width:42px;height:42px;border:none;border-radius:50%;background:#22345C;color:#F5C518;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.18)">
+        ›
+      </button>
+
+    </div>
+  </section>
+
+  <!-- BLOCK 3: REVIEWS -->
+  <section data-screen-label="03 REVIEWS" style="background:#FFF9E8;padding:88px 64px;display:flex;flex-direction:column;gap:44px;align-items:center">
+    <div style="text-align:center">
+      
+      <h2 style="font-size:36px;font-weight:900;color:#22345C">REAL ENERGY. REAL WOMEN.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;width:100%;max-width:1300px">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
+        <div style="background:#fff;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;box-shadow:0 4px 18px rgba(22,33,61,.06)">
+          <div style="display:flex;align-items:center;gap:14px">
+            <image-slot id="{{ r.id }}" shape="circle" fit="cover" src="./assets/{{ r.photo }}" placeholder="Photo" style="width:56px;height:56px;flex:none"></image-slot>
+            <div>
+              <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;color:#22345C">{{ r.name }}</div>
+              <div style="color:#F5C518;letter-spacing:1px;font-size:14px">{{ r.starsStr }}</div>
+            </div>
+          </div>
+          <div style="color:#22345C;font-size:15px;line-height:1.5;font-style:italic">"{{ r.quote }}"</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- BLOCK 4: EMAIL CAPTURE -->
+  <section id="email-form-desktop" data-screen-label="04 Email capture" style="background:#22345C;padding:96px 64px;display:flex;justify-content:center">
+    <div style="max-width:620px;width:100%;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
+      <sc-if value="{{ !submitted }}" hint-placeholder-val="{{ true }}">
+        <h2 style="font-size:38px;font-weight:900;color:#fff;line-height:1.2">Get <span style="color:#F5C518">-25% off</span> your first order.</h2>
+        <p style="color:rgba(255,255,255,.75);font-size:17px;margin:0">Enter your email. Get the code instantly.</p>
+        <form onSubmit="{{ handleSubmit }}" style="display:flex;gap:10px;width:100%;max-width:460px;margin-top:12px">
+          <input type="email" required="{{ true }}" value="{{ email }}" onChange="{{ handleEmailChange }}" placeholder="you@email.com" style="flex:1;padding:16px 18px;border-radius:10px;border:none;font-size:16px;font-family:Inter,sans-serif">
+          <button type="submit" style="background:#F5C518;color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;padding:0 22px;border:none;border-radius:10px;cursor:pointer;white-space:nowrap">Get my 25% code →</button>
+        </form>
+        <p style="color:rgba(255,255,255,.45);font-size:13px;margin:6px 0 0">No spam. No subscription required. Cancel anytime.</p>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:center;margin-top:8px">
+          <span style="color:rgba(255,255,255,.6);font-size:12px;font-weight:700;letter-spacing:.08em;font-family:'Poppins',sans-serif">SALE ENDS IN:</span>
+          <div style="display:flex;gap:8px">
+            <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="4">
+              <div style="background:rgba(255,255,255,.1);border-radius:8px;padding:8px 12px;text-align:center;min-width:52px">
+                <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:22px;color:#fff">{{ c.value }}</div>
+                <div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.05em">{{ c.label }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <div style="font-size:14px;font-weight:700;letter-spacing:.1em;color:#F5C518;font-family:'Poppins',sans-serif">YOUR CODE IS READY</div>
+        <div style="background:#fff;border-radius:16px;padding:20px 32px;font-family:'Poppins',sans-serif;font-weight:900;font-size:28px;color:#22345C;letter-spacing:.06em;border:3px dashed #F5C518">RAW40</div>
+        <div style="display:flex;align-items:center;gap:16px;margin-top:6px">
+          <span style="color:rgba(255,255,255,.5);text-decoration:line-through;font-size:20px">43,20$</span>
+          <span style="color:#F5C518;font-size:36px;font-weight:900;font-family:'Poppins',sans-serif">32,40 $</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:center">
+          <span style="color:rgba(255,255,255,.6);font-size:12px;font-weight:700;letter-spacing:.08em;font-family:'Poppins',sans-serif">SALE ENDS IN:</span>
+          <div style="display:flex;gap:8px">
+            <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="3">
+              <div style="background:rgba(255,255,255,.1);border-radius:8px;padding:8px 12px;text-align:center;min-width:52px">
+                <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:22px;color:#fff">{{ c.value }}</div>
+                <div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.05em">{{ c.label }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <a href="#email-form-desktop" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:17px;padding:16px 28px;border-radius:10px;margin-top:8px">{{ cartIcon }} Buy Now on Amazon -25%</a>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- BLOCK 5: FOOTER -->
+  <section data-screen-label="05 FOOTER" style="background:#16213D;padding:56px 64px 40px;display:flex;flex-direction:column;gap:36px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+      <sc-for list="{{ trustBadges }}" as="b" hint-placeholder-count="8">
+        <div class="pill">{{ b }}</div>
+      </sc-for>
+    </div>
+    <div style="height:1px;background:rgba(255,255,255,.12)"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+      <div>
+        <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:18px;color:#fff;margin-bottom:6px">RAW GRAVITY</div>
+        <div style="color:rgba(255,255,255,.55);font-size:14px">Austin, TX · <a href="#email-form-desktop" style="color:rgba(255,255,255,.65)">Privacy Policy</a></div>
+      </div>
+      <a href="#email-form-desktop" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;padding:14px 24px;border-radius:10px">{{ cartIcon }} Buy Now on Amazon -25%</a>
+    </div>
+    <div style="text-align:center;color:rgba(255,255,255,.35);font-size:12px">© 2026 Raw Gravity. All rights reserved.</div>
+  </section>
+
+</div>
+<div class="mobile-version" style="width:100%;max-width:430px;margin:0 auto;background:#fff">
+
+  <!-- MOBILE VERSION -->
+
+  <!-- Top bar -->
+<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:#22345C;position:sticky;top:0;z-index:100;white-space:nowrap">
+
+  <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:14px;letter-spacing:.02em;color:#fff;line-height:1">
+    RAW GRAVITY
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+
+    <div style="display:flex;align-items:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;line-height:1">
+      <span style="color:#fff;font-weight:600">
+        4.9 <span style="color:#F5C518">★</span> 2,847
+      </span>
+    </div>
+
+    <a href="#email-form-mobile" style="display:flex;align-items:center;justify-content:center;gap:4px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:10px;padding:8px 10px;border-radius:7px;white-space:nowrap;line-height:1">
+      {{ cartIcon }} Buy Now on Amazon
+    </a>
+
+  </div>
+
+</div>
+
+  <!-- MOBILE HERO -->
+  <section data-screen-label="01 HERO" style="position:relative;background:#22345C;overflow:hidden">
+
+    <div style="padding:20px 20px 0;width:390px;height:116px">
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border-radius:8px;padding:6px 10px">
+          <span style="color:#F5C518;font-weight:700;font-size:11px;font-family:'Poppins',sans-serif">✓ Gut-friendly certified</span>
+        </div>
+
+        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border-radius:8px;padding:6px 10px">
+          {{ flagIcon }}
+          <span style="color:#F5C518;font-weight:700;font-size:11px;font-family:'Poppins',sans-serif">MADE IN USA</span>
+        </div>
+      </div>
+
+      <h1 style="font-size:32px;line-height:1.05;font-weight:900;letter-spacing:-.01em;margin-top:14px">
+        <span style="color:#F5C518">CALM ENERGY</span><br>
+        <span style="color:#fff">EVERY SINGLE CUP</span>
+      </h1>
+    </div>
+
+    <div style="width:430px;height:379px;background-image:url('./assets/hero.png');background-size:cover;background-position:top center"></div>
+
+    <div style="padding:20px 20px 36px;display:flex;flex-direction:column;gap:14px">
+
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div class="chk">
+          {{ checkIconWhite }}
+          <span style="color:#fff;font-size:14px;line-height:1.4;width:266px;height:38px">
+            Designed for real energy&nbsp;<br>without the jitters or the crash
+          </span>
+        </div>
+
+        <div class="chk">
+          {{ checkIconWhite }}
+          <span style="color:#fff;font-size:14px;line-height:1.4">
+            A coffee ritual you'll actually look forward to
+          </span>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="display:flex;gap:2px">{{ starsLarge }}</div>
+        <span style="color:#fff;font-weight:600;font-size:13px">4.9 · 2,847 reviews</span>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="color:rgba(255,255,255,.55);text-decoration:line-through;font-size:17px;font-weight:600">43,20$</span>
+        <span style="color:#F5C518;font-size:32px;font-weight:900;font-family:'Poppins',sans-serif">32,40 $</span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <span style="color:rgba(255,255,255,.6);font-size:10px;font-weight:700;letter-spacing:.06em;font-family:'Poppins',sans-serif">SALE ENDS IN:</span>
+
+        <div style="display:flex;gap:6px">
+          <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="4">
+            <div style="background:rgba(255,255,255,.1);border-radius:7px;padding:6px 9px;text-align:center;min-width:44px">
+              <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:17px;color:#fff">{{ c.value }}</div>
+              <div style="font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.04em">{{ c.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <a href="#email-form-mobile" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:16px;padding:16px 22px;border-radius:10px;box-shadow:0 8px 20px rgba(255,153,0,.35)">
+        {{ cartIcon }}
+        Buy Now on Amazon
+        <span style="background:#22345C;color:#F5C518;font-size:12px;padding:3px 8px;border-radius:6px;margin-left:2px">-25%</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- MOBILE RESULTS -->
+  <section data-screen-label="02 RESULTS" style="background:#FDF8F0;padding:44px 20px;display:flex;flex-direction:column;gap:28px;align-items:center">
+
+    <h2 style="text-align:center;font-size:26px;font-weight:900;color:#22345C;line-height:1.2">
+      Feel the Difference
+    </h2>
+
+    <!-- BEFORE -->
+    <div style="width:100%;position:relative">
+      <div class="pill" style="position:absolute;top:5px;left:-20px;background:#22345C;color:#fff;z-index:1">BEFORE</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center">
+        <image-slot
+          id="before-photo-mobile"
+          shape="circle"
+          fit="cover"
+          src="./assets/before.webp"
+          placeholder="Woman looking tired and jittery, holding regular coffee"
+          style="width:170px;height:170px;min-width:0">
+        </image-slot>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <sc-for list="{{ beforePoints }}" as="b" hint-placeholder-count="4">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="color:#E4453C;font-size:14px;text-shadow:0 0 6px rgba(228,69,60,.9),0 0 14px rgba(228,69,60,.6)">✕</span>
+              <span style="color:#22345C;font-size:12px">{{ b }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <!-- AFTER -->
+    <div style="width:100%;position:relative">
+      <div class="pill" style="position:absolute;top:5px;right:-20px;background:#F5C518;color:#22345C;z-index:1">AFTER</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center">
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <sc-for list="{{ afterPoints }}" as="a" hint-placeholder-count="4">
+            <div class="chk">
+              {{ checkIconYellowSmall }}
+              <span style="color:#22345C;font-size:12px;font-weight:600">{{ a }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <image-slot
+          id="after-photo-mobile"
+          shape="circle"
+          fit="cover"
+          src="./assets/after.webp"
+          placeholder="Woman smiling, calm and confident, holding Raw Gravity"
+          style="width:170px;height:170px;min-width:0">
+        </image-slot>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- MOBILE PROMO STRIP -->
+  <div style="background:#22345C;padding:14px 20px;display:flex;flex-direction:column;align-items:center;gap:10px">
+
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="color:rgba(255,255,255,.55);text-decoration:line-through;font-size:14px;font-weight:600">43,20$</span>
+      <span style="color:#F5C518;font-size:20px;font-weight:900;font-family:'Poppins',sans-serif">32,40 $</span>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:6px">
+      <span style="color:rgba(255,255,255,.55);font-size:10px;font-weight:700;letter-spacing:.05em;font-family:'Poppins',sans-serif">ENDS IN:</span>
+
+      <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="4">
+        <div style="background:rgba(255,255,255,.1);border-radius:6px;padding:3px 7px;text-align:center;min-width:30px">
+          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:12px;color:#fff">{{ c.value }}</div>
+          <div style="font-size:6px;color:rgba(255,255,255,.5);letter-spacing:.04em">{{ c.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <a href="#email-form-mobile" style="display:flex;align-items:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:13px;padding:10px 18px;border-radius:8px;white-space:nowrap">
+      {{ cartIcon }} Buy Now on Amazon -25%
+    </a>
+  </div>
+
+  <!-- MOBILE UGC -->
+  <section data-screen-label="UGC Photos" style="background:#fff;padding:32px 20px;display:flex;justify-content:center">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%">
+      <sc-for list="{{ ugcPhotos }}" as="u" hint-placeholder-count="6">
+        <image-slot
+          id="{{ u.id }}-m"
+          shape="rounded"
+          radius="14"
+          fit="cover"
+          src="{{ u.src }}"
+          placeholder="{{ u.placeholder }}"
+          style="width:100%;height:170px;min-width:0">
+        </image-slot>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- MOBILE REVIEWS -->
+  <section data-screen-label="03 REVIEWS" style="background:#FFF9E8;padding:44px 20px;display:flex;flex-direction:column;gap:24px;align-items:center">
+
+    <h2 style="font-size:22px;font-weight:900;color:#22345C;text-align:center;white-space:nowrap">
+      REAL ENERGY. REAL WOMEN.
+    </h2>
+
+    <div style="display:flex;flex-direction:column;gap:16px;width:100%">
+
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
+
+        <div style="background:#fff;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 4px 18px rgba(22,33,61,.06)">
+
+          <div style="display:flex;align-items:center;gap:12px">
+
+            <image-slot
+              id="{{ r.id }}-m"
+              shape="circle"
+              fit="cover"
+              src="./assets/{{ r.photo }}"
+              placeholder="Photo"
+              style="width:44px;height:44px;flex:none">
+            </image-slot>
+
+            <div>
+              <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:14px;color:#22345C">{{ r.name }}</div>
+              <div style="color:#F5C518;letter-spacing:1px;font-size:13px">{{ r.starsStr }}</div>
+            </div>
+
+          </div>
+
+          <div style="color:#22345C;font-size:14px;line-height:1.5;font-style:italic">
+            "{{ r.quote }}"
+          </div>
+
+        </div>
+
+      </sc-for>
+
+    </div>
+  </section>
+
+  <!-- MOBILE EMAIL CAPTURE -->
+  <section id="email-form-mobile" data-screen-label="04 Email capture" style="background:#22345C;padding:44px 20px;display:flex;justify-content:center">
+
+    <div style="width:100%;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
+
+      <sc-if value="{{ !submitted }}" hint-placeholder-val="{{ true }}">
+
+        <h2 style="font-size:24px;font-weight:900;color:#fff;line-height:1.2">
+          Get <span style="color:#F5C518">-25% off</span> your first order.
+        </h2>
+
+        <p style="color:rgba(255,255,255,.75);font-size:14px;margin:0">
+          Enter your email. Get the code instantly.
+        </p>
+
+        <form onSubmit="{{ handleSubmit }}" style="display:flex;flex-direction:column;gap:10px;width:100%">
+
+          <input
+            type="email"
+            required="{{ true }}"
+            value="{{ email }}"
+            onChange="{{ handleEmailChange }}"
+            placeholder="you@email.com"
+            style="padding:14px 16px;border-radius:10px;border:none;font-size:16px;font-family:Inter,sans-serif">
+
+          <button
+            type="submit"
+            style="background:#F5C518;color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;padding:14px;border:none;border-radius:10px;cursor:pointer">
+            Get my 25% code →
+          </button>
+
+        </form>
+
+        <p style="color:rgba(255,255,255,.45);font-size:12px;margin:0">
+          No spam. No subscription required. Cancel anytime.
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:center;margin-top:4px">
+          <span style="color:rgba(255,255,255,.6);font-size:10px;font-weight:700;letter-spacing:.06em;font-family:'Poppins',sans-serif">
+            SALE ENDS IN:
+          </span>
+
+          <div style="display:flex;gap:6px">
+            <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="4">
+              <div style="background:rgba(255,255,255,.1);border-radius:7px;padding:6px 9px;text-align:center;min-width:44px">
+                <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:17px;color:#fff">{{ c.value }}</div>
+                <div style="font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.04em">{{ c.label }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+      </sc-if>
+
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+
+        <div style="font-size:12px;font-weight:700;letter-spacing:.08em;color:#F5C518;font-family:'Poppins',sans-serif">
+          YOUR CODE IS READY
+        </div>
+
+        <div style="background:#fff;border-radius:14px;padding:16px 26px;font-family:'Poppins',sans-serif;font-weight:900;font-size:24px;color:#22345C;letter-spacing:.05em;border:3px dashed #F5C518">
+          RAWGRAV25
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="color:rgba(255,255,255,.5);text-decoration:line-through;font-size:16px">43,20$</span>
+          <span style="color:#F5C518;font-size:28px;font-weight:900;font-family:'Poppins',sans-serif">32,40 $</span>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:center">
+
+          <span style="color:rgba(255,255,255,.6);font-size:10px;font-weight:700;letter-spacing:.06em;font-family:'Poppins',sans-serif">
+            SALE ENDS IN:
+          </span>
+
+          <div style="display:flex;gap:6px">
+            <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="3">
+              <div style="background:rgba(255,255,255,.1);border-radius:7px;padding:6px 9px;text-align:center;min-width:44px">
+                <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:17px;color:#fff">{{ c.value }}</div>
+                <div style="font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.04em">{{ c.label }}</div>
+              </div>
+            </sc-for>
+          </div>
+
+        </div>
+
+        <a href="#email-form-mobile" style="display:flex;align-items:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;padding:14px 24px;border-radius:10px">
+          {{ cartIcon }} Buy Now on Amazon -25%
+        </a>
+
+      </sc-if>
+
+    </div>
+  </section>
+
+  <!-- MOBILE FOOTER -->
+  <section data-screen-label="05 FOOTER" style="background:#16213D;padding:36px 20px 28px;display:flex;flex-direction:column;gap:24px">
+
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px">
+      <sc-for list="{{ trustBadges }}" as="b" hint-placeholder-count="8">
+        <div class="pill" style="font-size:9px;padding:4px 10px">{{ b }}</div>
+      </sc-for>
+    </div>
+
+    <div style="height:1px;background:rgba(255,255,255,.12)"></div>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
+
+      <div>
+        <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:16px;color:#fff;margin-bottom:4px">
+          RAW GRAVITY
+        </div>
+
+        <div style="color:rgba(255,255,255,.55);font-size:12px">
+          Austin, TX<br>
+          <a href="#" style="color:rgba(255,255,255,.65)">Privacy Policy</a>
+        </div>
+      </div>
+
+      <a href="#email-form-mobile" style="display:flex;align-items:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:13px;padding:12px 22px;border-radius:10px">
+        {{ cartIcon }} Buy Now on Amazon -25%
+      </a>
+
+    </div>
+
+    <div style="text-align:center;color:rgba(255,255,255,.35);font-size:11px">
+      © 2026 Raw Gravity. All rights reserved.
+    </div>
+
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { email: '', submitted: false, now: Date.now() };
+
+  componentDidMount() {
+    this._timer = setInterval(() => this.setState({ now: Date.now() }), 1000);
+    this._ugcPhotos = this._buildUgcPhotos();
+  }
+  componentWillUnmount() {
+    clearInterval(this._timer);
+  }
+  getDeadline() {
+    const d = new Date(this.state.now);
+    const deadline = new Date(d);
+    deadline.setHours(d.getHours(), 59, 0, 0);
+    if (deadline.getTime() <= d.getTime()) deadline.setHours(deadline.getHours() + 1);
+    return deadline;
+  }
+
+  checkSvg(color) {
+    return React.createElement('svg', {width:20,height:20,viewBox:'0 0 20 20',fill:'none',style:{flex:'none',marginTop:2}},
+      React.createElement('circle',{cx:10,cy:10,r:10,fill:color}),
+      React.createElement('path',{d:'M5.5 10.2l2.6 2.6L14.5 7',stroke:color==='#F5C518'?'#22345C':'#fff',strokeWidth:2,strokeLinecap:'round',strokeLinejoin:'round',fill:'none'})
+    );
+  }
+  starSvg(color, size) {
+    return React.createElement('svg', {width:size,height:size,viewBox:'0 0 24 24',fill:color},
+      React.createElement('path',{d:'M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L5.8 21l1.6-7-5.4-4.7 7.1-.6z'})
+    );
+  }
+  flagSvg() {
+    return React.createElement('svg', {width:18,height:13,viewBox:'0 0 19 14',style:{flex:'none'}},
+      React.createElement('rect',{width:19,height:14,fill:'#B31942'}),
+      React.createElement('g',{fill:'#fff'}, [0,2,4,6,8,10,12].map((y,i) => React.createElement('rect',{key:i,x:0,y:y+1,width:19,height:1}))),
+      React.createElement('rect',{width:8,height:7,fill:'#0A3161'})
+    );
+  }
+  cartSvg() {
+    return React.createElement('svg',{width:20,height:20,viewBox:'0 0 24 24',fill:'none'},
+      React.createElement('path',{d:'M3 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 8H6',stroke:'#22345C',strokeWidth:2,strokeLinecap:'round',strokeLinejoin:'round'}),
+      React.createElement('circle',{cx:10,cy:21,r:1.5,fill:'#22345C'}),
+      React.createElement('circle',{cx:18,cy:21,r:1.5,fill:'#22345C'})
+    );
+  }
+
+  _buildUgcPhotos() {
+      return [
+        {id:'ugc-1', src:'./assets/ugc-1.png', placeholder:'UGC photo 1'},
+        {id:'ugc-2', src:'./assets/ugc-2.png', placeholder:'UGC photo 2'},
+        {id:'ugc-3', src:'./assets/ugc-3.png', placeholder:'UGC photo 3'},
+        {id:'ugc-4', src:'./assets/ugc-4.jpeg', placeholder:'UGC photo 4'},
+        {id:'ugc-5', src:'./assets/ugc-5.png', placeholder:'UGC photo 5'},
+        {id:'ugc-6', src:'./assets/ugc-6.png', placeholder:'UGC photo 6'},
+      ];
+    }
+
+  renderVals() {
+    const avatars = [
+      {initial:'E', color:'#1479C9'},
+      {initial:'J', color:'#F5C518'},
+      {initial:'P', color:'#22345C'},
+      {initial:'L', color:'#1479C9'},
+      {initial:'R', color:'#F5C518'},
+    ];
+    const resultPhotos = [
+      {id:'result-1', placeholder:'Woman smiling, calm morning', caption:'No Jitters'},
+      {id:'result-2', placeholder:'Woman relaxed mid-afternoon', caption:'No Crash'},
+      {id:'result-3', placeholder:'Close-up of coffee cup', caption:'Real Coffee Taste'},
+    ];
+    const dayMoments = [
+      {id:'day-1', placeholder:'Morning meeting, laptop + coffee', label:'Morning meetings'},
+      {id:'day-2', placeholder:'Post-workout with shaker bottle', label:'Workout mornings'},
+      {id:'day-3', placeholder:'Slow weekend coffee at home', label:'Slow weekend mornings'},
+    ];
+    const reviews = [
+      {id:'rev-1', name:'Emma S., 29', photo:'emma.png', starsStr:'★★★★★', quote:"I gave it 14 days. No jitters, no crash — just steady focus."},
+      {id:'rev-2', name:'Jess T., 28', photo:'jess.png', starsStr:'★★★★★', quote:"Finally a morning ritual that actually looks as good as it feels."},
+      {id:'rev-3', name:'Priya N., 31', photo:'priya.png', starsStr:'★★★★★', quote:"I used to get shaky by 10am. Now I just feel... steady."},
+      {id:'rev-4', name:'Linda K., 34', photo:'linda.png', starsStr:'★★★★★', quote:"My energy is clean — I didn't even reach for my afternoon matcha."},
+      {id:'rev-5', name:'Rachel M., 27', photo:'rachel.png', starsStr:'★★★★☆', quote:"Still getting used to the taste, but the way I feel makes it worth it."},
+      {id:'rev-6', name:'Alexis B., 33', photo:'alexis.jpeg', starsStr:'★★★★★', quote:"Switched from coffee. My anxiety dropped in 2 weeks."},
+    ];
+    const ugcPhotos = this._ugcPhotos || this._buildUgcPhotos();;
+    const trustBadges = ['NON-GMO','🇺🇸 MADE IN USA','REAL, GUT-FRIENDLY INGREDIENTS','DESIGNED FOR LONG-TERM COMFORT','ZERO ACIDITY FORMULA','LOW-ACID ARABICA','NO FILLERS, NO MALTODEXTRIN','WHOLE-INGREDIENT LABEL'];
+    const beforePoints = [
+      'Anxious, jittery energy',
+      'Acidic coffee upsets your stomach',
+      'Afternoon energy crash',
+      'Mood swings all day',
+    ];
+    const afterPoints = [
+      'Calm, steady energy',
+      'Gut-friendly, zero acidity',
+      'No crash, all-day focus',
+      'Steady mood, no swings',
+    ];
+    const formulaPillars = [
+      {title:'CALM', desc:'Holy Basil supports cortisol & stress balance'},
+      {title:'FOCUS', desc:'~23mg caffeine + Lion\u2019s Mane for clarity, no overstimulation'},
+      {title:'GUT-FRIENDLY', desc:'Zero acidity formula, \neasy on your stomach'},
+    ];
+    const deadline = this.getDeadline();
+    let diff = Math.max(0, deadline.getTime() - this.state.now);
+    const hh = Math.floor(diff / 3600000);
+    const mm = Math.floor((diff % 3600000) / 60000);
+    const ss = Math.floor((diff % 60000) / 1000);
+    const pad = (n) => String(n).padStart(2, '0');
+    const countdownParts = [
+      {value: pad(hh), label: 'HRS'},
+      {value: pad(mm), label: 'MIN'},
+      {value: pad(ss), label: 'SEC'},
+    ];
+
+    const starsRow = React.createElement('div', {style:{display:'flex',gap:1}}, [1,2,3,4,5].map(i => React.createElement(React.Fragment,{key:i}, this.starSvg('#F5C518',14))));
+
+    return {
+      avatars, reviews, trustBadges, beforePoints, afterPoints, formulaPillars, countdownParts, ugcPhotos,
+      email: this.state.email,
+      submitted: this.state.submitted,
+      handleEmailChange: (e) => this.setState({ email: e.target.value }),
+      handleSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+      checkIconWhite: this.checkSvg('#F5C518'),
+      checkIconNavy: this.checkSvg('#1479C9'),
+      checkIconYellow: this.checkSvg('#F5C518'),
+      checkIconYellowSmall: this.checkSvg('#F5C518'),
+      cartIcon: this.cartSvg(),
+      flagIcon: this.flagSvg(),
+      stars: starsRow,
+      starsLarge: [1,2,3,4,5].map((i) => React.createElement(React.Fragment,{key:i}, this.starSvg('#F5C518',14))),
+    };
+  }
+}
+
+</script>
+<script>
+  (() => {
+    let slider;
+
+    const initUGCSlider = () => {
+      slider = document.getElementById('ugc-slider');
+      const leftButton = document.getElementById('ugc-arrow-left');
+      const rightButton = document.getElementById('ugc-arrow-right');
+
+      if (leftButton) {
+        leftButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          slider.scrollBy({
+            left: -280,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      if (rightButton) {
+        rightButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          slider.scrollBy({
+            left: 280,
+            behavior: 'smooth'
+          });
+        });
+      }
+      if (!slider || slider.dataset.dragReady === '1') return;
+
+      slider.dataset.dragReady = '1';
+
+      let isDown = false;
+      let startX = 0;
+      let startScroll = 0;
+
+      slider.addEventListener('pointerdown', (e) => {
+        isDown = true;
+        startX = e.clientX;
+        startScroll = slider.scrollLeft;
+        slider.style.cursor = 'grabbing';
+        slider.setPointerCapture(e.pointerId);
+      });
+
+      slider.addEventListener('pointermove', (e) => {
+        if (!isDown) return;
+
+        const dx = e.clientX - startX;
+        slider.scrollLeft = startScroll - dx;
+      });
+
+      const stopDrag = () => {
+        isDown = false;
+        slider.style.cursor = 'grab';
+      };
+
+      slider.addEventListener('pointerup', stopDrag);
+      slider.addEventListener('pointercancel', stopDrag);
+      slider.addEventListener('pointerleave', () => {
+        if (isDown) stopDrag();
+      });
+    };
+
+    setTimeout(initUGCSlider, 500);
+    setTimeout(initUGCSlider, 1500);
+    setTimeout(initUGCSlider, 3000);
+  })();
+</script>
+</body>
+</html>
