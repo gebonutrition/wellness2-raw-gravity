@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<script src="./pixel.js"></script>
+<script src="./fbpixel.js"></script>
 </head>
 <body>
 <x-dc>
@@ -851,6 +853,7 @@ class Component extends DCLogic {
       try {
         const params = new URLSearchParams(window.location.search);
         const source = params.get('source') || 'direct';
+        const creative = params.get('creative') || 'unknown';
 
         const response = await fetch('/api/subscribe', {
           method: 'POST',
@@ -859,7 +862,8 @@ class Component extends DCLogic {
           },
           body: JSON.stringify({
             email,
-            source
+            source,
+            creative
           })
         });
 
@@ -872,6 +876,9 @@ class Component extends DCLogic {
         this.setState({
           submitted: true
         });
+
+        window.rawGravityTrackTikTokLead();
+        window.rawGravityTrackMetaLead();
 
         setTimeout(() => {
           window.location.href = data.amazonUrl || 'https://www.amazon.com/';

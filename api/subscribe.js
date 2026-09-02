@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { email, source } = req.body || {};
+    const { email, source, creative } = req.body || {};
 
     if (!email || typeof email !== 'string') {
       return res.status(400).json({ error: 'Email is required' });
@@ -36,12 +36,16 @@ export default async function handler(req, res) {
                 data: [
                   {
                     type: 'profile',
-                    attributes: {
-                      email,
-                      subscriptions: {
-                        email: {
-                          marketing: {
-                            consent: 'SUBSCRIBED'
+					attributes: {
+					  email,
+					  properties: {
+						source: source || 'direct',
+						creative: creative || 'unknown'
+					  },
+					  subscriptions: {
+						email: {
+						  marketing: {
+							consent: 'SUBSCRIBED'
                           }
                         }
                       }
