@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { email, source, creative } = req.body || {};
+    const { email, landing, source, creative } = req.body || {};
 
     if (!email || typeof email !== 'string') {
       return res.status(400).json({
@@ -17,6 +17,7 @@ export default async function handler(req, res) {
     }
 
     const cleanEmail = email.trim();
+    const cleanLanding = String(landing || 'wellness2').trim();
     const cleanSource = String(source || 'unknown').trim();
     const cleanCreative = String(creative || 'unknown').trim();
 
@@ -41,7 +42,7 @@ export default async function handler(req, res) {
 
     /*
      * STEP 1
-     * Create or update the Klaviyo profile with source + creative.
+     * Create or update the Klaviyo profile with landing + source + creative.
      */
     const profileResponse = await fetch(
       'https://a.klaviyo.com/api/profile-import',
@@ -54,6 +55,7 @@ export default async function handler(req, res) {
             attributes: {
               email: cleanEmail,
               properties: {
+                landing: cleanLanding,
                 source: cleanSource,
                 creative: cleanCreative
               }
@@ -143,13 +145,13 @@ export default async function handler(req, res) {
      */
     const amazonUrls = {
       tiktok:
-        'https://www.amazon.com/dp/B0GTWB11LW?maas=maas_adg_B74ABBC3348F9B56E926CFE4C522B727_afap_abs&ref_=aa_maas&tag=maas,
+        'https://www.amazon.com/dp/B0GTWB11LW?maas=maas_adg_9EAB36473ED1EB5F2AC4DBD00BF649CE_afap_abs&ref_=aa_maas&tag=maas',
 
       meta:
-        'https://www.amazon.com/dp/B0GTWB11LW?maas=maas_adg_2762FBAC54032DCB70C33071304BDD2B_afap_abs&ref_=aa_maas&tag=maas ,
+        'https://www.amazon.com/dp/B0GTWB11LW?maas=maas_adg_B05D582BAB7E5BC8F40DEBA1EBC61AEE_afap_abs&ref_=aa_maas&tag=maas',
 
       klaviyo:
-        'https://www.amazon.com/dp/B0GTWB11LW?maas=maas_adg_25B95FF8BD805EF1A9DF6465C32333F9_afap_abs&ref_=aa_maas&tag=maas,
+        'https://www.amazon.com/dp/B0GTWB11LW?maas=maas_adg_25B95FF8BD805EF1A9DF6465C32333F9_afap_abs&ref_=aa_maas&tag=maas',
 
       instagram:
         'https://www.amazon.com/dp/B0GTWB11LW?maas=maas_adg_DA3922AD16009007A17A120E9C2F3E79_afap_abs&ref_=aa_maas&tag=maas'
