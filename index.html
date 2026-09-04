@@ -877,8 +877,13 @@ class Component extends DCLogic {
           submitted: true
         });
 
-        window.rawGravityTrackTikTokLead();
-        window.rawGravityTrackMetaLead();
+        if (typeof window.rawGravityTrackTikTokLead === 'function') {
+          window.rawGravityTrackTikTokLead();
+        }
+
+        if (typeof window.rawGravityTrackMetaLead === 'function') {
+          window.rawGravityTrackMetaLead();
+        }
 
         setTimeout(() => {
           window.location.href = data.amazonUrl || 'https://www.amazon.com/';
