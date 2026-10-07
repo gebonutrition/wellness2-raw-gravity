@@ -547,24 +547,24 @@
   <div style="background:#22345C;padding:14px 20px;display:flex;flex-direction:column;align-items:center;gap:10px">
 
     <div style="display:flex;align-items:center;gap:10px">
-      <span style="color:rgba(255,255,255,.55);text-decoration:line-through;font-size:14px;font-weight:600">43,20$</span>
-      <span style="color:#F5C518;font-size:20px;font-weight:900;font-family:'Poppins',sans-serif">32,40 $</span>
+      <span style="color:rgba(255,255,255,.55);text-decoration:line-through;font-size:14px;font-weight:600">$37.70</span>
+      <span style="color:#F5C518;font-size:20px;font-weight:900;font-family:'Poppins',sans-serif">$19.70</span>
     </div>
 
-    <div style="display:flex;align-items:center;gap:6px">
-      <span style="color:rgba(255,255,255,.55);font-size:10px;font-weight:700;letter-spacing:.05em;font-family:'Poppins',sans-serif">ENDS IN:</span>
+    <div style="display:flex;flex-direction:column;gap:6px;width:100%;max-width:260px">
+      <span style="color:#fff;font-family:'Poppins',sans-serif;font-weight:800;font-size:13px">
+        Only <span style="color:#F5C518;font-size:17px">37</span> purchases left!
+      </span>
 
-      <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="4">
-        <div style="background:rgba(255,255,255,.1);border-radius:6px;padding:3px 7px;text-align:center;min-width:30px">
-          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:12px;color:#fff">{{ c.value }}</div>
-          <div style="font-size:6px;color:rgba(255,255,255,.5);letter-spacing:.04em">{{ c.label }}</div>
-        </div>
-      </sc-for>
+      <div style="height:8px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden">
+        <div style="width:63%;height:100%;border-radius:999px;background:linear-gradient(90deg,#FFC94D 0%,#FF9900 45%,#E4453C 100%);box-shadow:0 0 10px rgba(228,69,60,.7)"></div>
+      </div>
     </div>
 
     <a href="#email-form-mobile" style="display:flex;align-items:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:13px;padding:10px 18px;border-radius:8px;white-space:nowrap">
-      {{ cartIcon }} Buy Now on Amazon -25%
+      {{ cartIcon }} Buy Now on Amazon -48%
     </a>
+
   </div>
 
   <!-- MOBILE UGC -->
@@ -631,13 +631,35 @@
 
       <sc-if value="{{ !submitted }}" hint-placeholder-val="{{ true }}">
 
-        <h2 style="font-size:24px;font-weight:900;color:#fff;line-height:1.2">
-          Get <span style="color:#F5C518">-25% off</span> your first order.
+        <h2 style="font-size:27px;font-weight:900;color:#fff;line-height:1.2">
+          Get <span style="color:#F5C518">-48%</span> on your first order
         </h2>
 
-        <p style="color:rgba(255,255,255,.75);font-size:14px;margin:0">
-          Enter your email. Get the code instantly.
-        </p>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(245,197,24,.35);border-radius:14px;padding:16px 18px;width:100%;box-sizing:border-box">
+
+          <span style="color:#fff;font-family:'Poppins',sans-serif;font-weight:700;font-size:13px">
+            Limited low price
+          </span>
+
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="color:#F5C518;font-size:38px;line-height:1;font-weight:900;font-family:'Poppins',sans-serif">
+              $19.70
+            </span>
+
+            <span style="background:#E4453C;color:#fff;font-family:'Poppins',sans-serif;font-weight:900;font-size:15px;padding:5px 10px;border-radius:9px">
+              -48%
+            </span>
+          </div>
+
+          <span style="color:rgba(255,255,255,.65);font-size:13px">
+            Full price <span style="text-decoration:line-through">$37.70</span>
+          </span>
+
+          <span style="color:rgba(255,255,255,.8);font-size:12px;font-weight:500;line-height:1.4">
+            Lowest price ever · Goes up after the next 100 orders
+          </span>
+
+        </div>
 
         <form onSubmit="{{ handleSubmit }}" style="display:flex;flex-direction:column;gap:10px;width:100%">
 
@@ -647,71 +669,45 @@
             value="{{ email }}"
             onChange="{{ handleEmailChange }}"
             placeholder="you@email.com"
-            style="padding:14px 16px;border-radius:10px;border:none;font-size:16px;font-family:Inter,sans-serif">
+            style="padding:14px 16px;border-radius:10px;border:none;font-size:16px;font-family:Inter,sans-serif"
+          >
 
           <button
             type="submit"
-            style="background:#F5C518;color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;padding:14px;border:none;border-radius:10px;cursor:pointer">
-            Get my 25% code →
+            style="background:#F5C518;color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;padding:14px;border:none;border-radius:10px;cursor:pointer"
+          >
+            Get my discount →
           </button>
 
         </form>
 
-        <p style="color:rgba(255,255,255,.45);font-size:12px;margin:0">
-          No spam. No subscription required. Cancel anytime.
+        <p style="color:rgba(255,255,255,.55);font-size:12px;margin:0">
+          No spam. No subscription required.
         </p>
-
-        <div style="display:flex;flex-direction:column;gap:6px;align-items:center;margin-top:4px">
-          <span style="color:rgba(255,255,255,.6);font-size:10px;font-weight:700;letter-spacing:.06em;font-family:'Poppins',sans-serif">
-            SALE ENDS IN:
-          </span>
-
-          <div style="display:flex;gap:6px">
-            <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="4">
-              <div style="background:rgba(255,255,255,.1);border-radius:7px;padding:6px 9px;text-align:center;min-width:44px">
-                <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:17px;color:#fff">{{ c.value }}</div>
-                <div style="font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.04em">{{ c.label }}</div>
-              </div>
-            </sc-for>
-          </div>
-        </div>
 
       </sc-if>
 
       <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
 
-        <div style="font-size:12px;font-weight:700;letter-spacing:.08em;color:#F5C518;font-family:'Poppins',sans-serif">
-          YOUR CODE IS READY
+        <div style="font-size:12px;font-weight:700;letter-spacing:.1em;color:#F5C518;font-family:'Poppins',sans-serif">
+          CONGRATULATIONS!
         </div>
 
-        <div style="background:#fff;border-radius:14px;padding:16px 26px;font-family:'Poppins',sans-serif;font-weight:900;font-size:24px;color:#22345C;letter-spacing:.05em;border:3px dashed #F5C518">
-          RAWGRAV25
-        </div>
+        <h2 style="font-size:26px;font-weight:900;color:#fff;line-height:1.2">
+          Your <span style="color:#F5C518">-48%</span> discount is unlocked
+        </h2>
 
-        <div style="display:flex;align-items:center;gap:12px">
-          <span style="color:rgba(255,255,255,.5);text-decoration:line-through;font-size:16px">43,20$</span>
-          <span style="color:#F5C518;font-size:28px;font-weight:900;font-family:'Poppins',sans-serif">32,40 $</span>
-        </div>
+        <p style="color:rgba(255,255,255,.8);font-size:15px;margin:0;line-height:1.5">
+          Follow the link and get your Raw Gravity on Amazon for
+          <span style="color:#F5C518;font-weight:700">$19.70</span>
+          <span style="text-decoration:line-through;color:rgba(255,255,255,.5)">$37.70</span>
+        </p>
 
-        <div style="display:flex;flex-direction:column;gap:6px;align-items:center">
-
-          <span style="color:rgba(255,255,255,.6);font-size:10px;font-weight:700;letter-spacing:.06em;font-family:'Poppins',sans-serif">
-            SALE ENDS IN:
-          </span>
-
-          <div style="display:flex;gap:6px">
-            <sc-for list="{{ countdownParts }}" as="c" hint-placeholder-count="3">
-              <div style="background:rgba(255,255,255,.1);border-radius:7px;padding:6px 9px;text-align:center;min-width:44px">
-                <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:17px;color:#fff">{{ c.value }}</div>
-                <div style="font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.04em">{{ c.label }}</div>
-              </div>
-            </sc-for>
-          </div>
-
-        </div>
-
-        <a href="#email-form-mobile" style="display:flex;align-items:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;padding:14px 24px;border-radius:10px">
-          {{ cartIcon }} Buy Now on Amazon -25%
+        <a
+          href="#email-form-mobile"
+          style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;padding:14px 22px;border-radius:10px;width:100%;box-sizing:border-box;box-shadow:0 8px 20px rgba(255,153,0,.35)"
+        >
+          {{ cartIcon }} Buy Raw Gravity on Amazon -48%
         </a>
 
       </sc-if>
@@ -744,7 +740,7 @@
       </div>
 
       <a href="#email-form-mobile" style="display:flex;align-items:center;gap:8px;background:linear-gradient(180deg,#FFC94D,#FF9900);color:#22345C;font-family:'Poppins',sans-serif;font-weight:800;font-size:13px;padding:12px 22px;border-radius:10px">
-        {{ cartIcon }} Buy Now on Amazon -25%
+        {{ cartIcon }} Buy Now on Amazon -48%
       </a>
 
     </div>
