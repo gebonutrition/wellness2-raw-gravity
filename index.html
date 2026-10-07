@@ -27,7 +27,8 @@
 <style>
   .desktop-version { display: block; }
   .mobile-version { display: none; }
-
+  .mobile-version,
+  .mobile-version *{    box-sizing:border-box;  }
   @media (max-width: 767px) {
     .desktop-version { display: none; }
     .mobile-version { display: block; }
