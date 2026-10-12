@@ -1,9 +1,7 @@
 (function () {
-  const fbPixelId = new URLSearchParams(window.location.search).get('fbpixel');
-
-  if (!fbPixelId) {
-    return;
-  }
+  const fbPixelId =
+    new URLSearchParams(window.location.search).get('fbpixel') ||
+    '1632582321547641';
 
   !function (f, b, e, v, n, t, s) {
     if (f.fbq) return;
